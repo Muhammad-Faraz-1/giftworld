@@ -5,8 +5,7 @@ class Provider1 extends ChangeNotifier {
   onbchange() {
     if (pages == 3) {
       pages = 1;
-    }
-    else if(pages!=3){
+    } else if (pages != 3) {
       pages = pages + 1;
     }
     print(onb);
@@ -17,6 +16,19 @@ class Provider1 extends ChangeNotifier {
   currentpage(int page) {
     pages = page;
     print(pages);
+    notifyListeners();
+  }
+
+  bool pshow = false;
+  pshow1() {
+    pshow = !pshow;
+    notifyListeners();
+    print(pshow);
+  }
+
+  String toogle='m';
+  fortoggle(String togglenew) {
+    toogle = togglenew;
     notifyListeners();
   }
 }

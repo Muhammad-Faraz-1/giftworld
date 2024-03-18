@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:giftsworld/pages/loginoptions.dart';
 import 'package:giftsworld/statemanager/provider.dart';
 import 'package:giftsworld/utils/multisimple.dart';
 import 'package:giftsworld/widgets/bottomclick.dart';
@@ -16,21 +17,25 @@ class OnBoardingScreen extends StatelessWidget {
       child: Scaffold(
         body: Stack(
           children: [
-            ONB1(),
+            const ONB1(),
             Positioned(
               top: 15.h,
               right: 15.w,
               child: GestureDetector(
                 onTap: () {
-                  Provider11.currentpage(3);
+                  // Provider11.currentpage(3);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LoginOptions()),
+                  );
                 },
                 child: Container(
                   height: 35.h,
                   width: 60.w,
-                  padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                  padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
-                    color: Color.fromARGB(255, 224, 224, 224),
+                    color: const Color.fromARGB(255, 224, 224, 224),
                     // border: Border.all(color: Colors.black),
                   ),
                   child: Center(
@@ -43,7 +48,7 @@ class OnBoardingScreen extends StatelessWidget {
                 ),
               ),
             ),
-            imgchanger(),
+            const imgchanger(),
           ],
         ),
       ),

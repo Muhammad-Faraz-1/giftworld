@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:giftsworld/pages/loginoptions.dart';
 import 'package:giftsworld/statemanager/provider.dart';
 import 'package:provider/provider.dart';
 
@@ -110,72 +111,6 @@ class BottomClick extends StatelessWidget {
                     ], shape: BoxShape.circle, color: Colors.white),
                   ),
           ),
-          // SizedBox(
-          //   width: 15.h,
-          // ),
-          // GestureDetector(
-          //   onTap: () {
-          //     Provider11.currentpage(4);
-          //   },
-          //   child: Provider11.pages == 4
-          //       ? Container(
-          //           height: 10.h,
-          //           width: 25.w,
-          //           decoration: BoxDecoration(
-          //               boxShadow: [
-          //                 BoxShadow(
-          //                     color: Colors.black.withOpacity(0.3),
-          //                     spreadRadius: 2,
-          //                     blurRadius: 2),
-          //               ],
-          //               // shape: BoxShape.circle,
-          //               borderRadius: BorderRadius.circular(15),
-          //               color: Colors.white),
-          //         )
-          //       : Container(
-          //           height: 10.h,
-          //           width: 10.w,
-          //           decoration: BoxDecoration(boxShadow: [
-          //             BoxShadow(
-          //                 color: Colors.black.withOpacity(0.3),
-          //                 spreadRadius: 2,
-          //                 blurRadius: 2),
-          //           ], shape: BoxShape.circle, color: Colors.white),
-          //         ),
-          // ),
-          // SizedBox(
-          //   width: 15.h,
-          // ),
-          // GestureDetector(
-          //   onTap: () {
-          //     Provider11.currentpage(5);
-          //   },
-          //   child: Provider11.pages == 5
-          //       ? Container(
-          //           height: 10.h,
-          //           width: 25.w,
-          //           decoration: BoxDecoration(
-          //               boxShadow: [
-          //                 BoxShadow(
-          //                     color: Colors.black.withOpacity(0.3),
-          //                     spreadRadius: 2,
-          //                     blurRadius: 2),
-          //               ],
-          //               // shape: BoxShape.circle,
-          //               borderRadius: BorderRadius.circular(15),
-          //               color: Colors.white),
-          //         )
-          //       : Container(
-          //           height: 10.h,
-          //           width: 10.w,
-          //           decoration: BoxDecoration(boxShadow: [
-          //             BoxShadow(
-          //                 color: Colors.black.withOpacity(0.3),
-          //                 spreadRadius: 2,
-          //                 blurRadius: 2),
-          //           ], shape: BoxShape.circle, color: Colors.white),
-          //         ),
-          // ),
         ],
       ),
     );
@@ -219,7 +154,13 @@ class imgchanger extends StatelessWidget {
                 // ),
                 GestureDetector(
                   onTap: () {
-                    Provider11.onbchange();
+                    Provider11.pages == 3
+                        ? Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginOptions()),
+                          )
+                        : Provider11.onbchange();
                   },
                   child: Container(
                     padding: EdgeInsets.all(2),

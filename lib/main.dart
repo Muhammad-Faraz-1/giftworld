@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:giftsworld/pages/loginoptions.dart';
+import 'package:giftsworld/pages/loginpage.dart';
 import 'package:giftsworld/pages/onboardingscreen.dart';
+import 'package:giftsworld/pages/profilepage.dart';
+import 'package:giftsworld/pages/signuppage.dart';
 import 'package:giftsworld/statemanager/provider.dart';
 import 'package:provider/provider.dart';
 
@@ -20,16 +24,13 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return ChangeNotifierProvider(
             create: (context) => Provider1(),
-            child: MaterialApp(
+            child: const MaterialApp(
               debugShowCheckedModeBanner: false,
-              // initialRoute: '/Login',
-              // routes: {
-              //   '/catagories': (context) => const LandingPage(),
-              //   '/subcatagories': (context) => const SubCatagories(),
-              //   '/Products': (context) => const Productspage(),
-              //   '/Login': (context) =>  LoginPage(),
-              // },
-              home: OnBoardingScreen(),
+              // home: OnBoardingScreen(),
+              // home: LoginOptions(),
+              // home: SignupPage(),
+              // home: LoginPage(),
+              home: ProfilePage(),
             ),
           );
         });
@@ -48,7 +49,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.red,
     );
   }
