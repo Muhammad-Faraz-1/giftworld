@@ -16,16 +16,16 @@ class LoginOptions extends StatelessWidget {
             Container(
               height: double.infinity,
               width: double.infinity,
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                   color: Color.fromARGB(255, 245, 208, 193),
                   image: DecorationImage(
-                      image: AssetImage('assets/22.png'), fit: BoxFit.contain)),
+                      image: AssetImage('assets/img/22.png'), fit: BoxFit.contain)),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
-                    height: 40.h,
+                    height: 50.h,
                     width: 300.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
@@ -36,12 +36,12 @@ class LoginOptions extends StatelessWidget {
                         Container(
                             height: 25.h,
                             width: 25.w,
-                            child: Image.asset('assets/apple.png')),
+                            child: Image.asset('assets/img/apple.png')),
                         SizedBox(
                           width: 30.w,
                         ),
                         MultiSimple(
-                            color: Colors.black,
+                            color: Color(0xff36454F),
                             subtitle: 'Continue With Apple',
                             weight: FontWeight.w600,
                             size: 15)
@@ -52,7 +52,7 @@ class LoginOptions extends StatelessWidget {
                     height: 20.h,
                   ),
                   Container(
-                    height: 40.h,
+                    height: 50.h,
                     width: 300.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
@@ -63,12 +63,12 @@ class LoginOptions extends StatelessWidget {
                         Container(
                             height: 25.h,
                             width: 25.w,
-                            child: Image.asset('assets/google.png')),
+                            child: Image.asset('assets/img/google.png')),
                         SizedBox(
                           width: 30.w,
                         ),
                         MultiSimple(
-                            color: Colors.black,
+                            color: Color(0xff36454F),
                             subtitle: 'Continue With Google',
                             weight: FontWeight.w600,
                             size: 15)
@@ -76,7 +76,7 @@ class LoginOptions extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 20.h,
+                    height: 15.h,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -92,14 +92,14 @@ class LoginOptions extends StatelessWidget {
                             );
                           },
                           child: Container(
-                            height: 40.h,
-                            width: 150.w,
+                            height: 45.h,
+                            width: 140.w,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
                                 color: Color.fromARGB(255, 240, 240, 240)),
                             child: Center(
                                 child: MultiSimple(
-                                    color: Colors.black,
+                                    color: Color(0xff36454F),
                                     subtitle: 'Signup',
                                     weight: FontWeight.w600,
                                     size: 18)),
@@ -114,14 +114,14 @@ class LoginOptions extends StatelessWidget {
                             );
                           },
                           child: Container(
-                            height: 40.h,
-                            width: 150.w,
+                            height: 45.h,
+                            width: 140.w,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
                                 color: Colors.white),
                             child: Center(
                                 child: MultiSimple(
-                                    color: Colors.black,
+                                    color: Color(0xff36454F),
                                     subtitle: 'Login',
                                     weight: FontWeight.w600,
                                     size: 18)),
@@ -138,7 +138,7 @@ class LoginOptions extends StatelessWidget {
                 left: 20.w,
                 child: Container(
                   width: 320.w,
-                  child: Image.asset('assets/logo1.png'),
+                  child: Image.asset('assets/img/logo1.png'),
                 ))
           ],
         ),

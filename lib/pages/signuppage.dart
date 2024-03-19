@@ -21,13 +21,13 @@ class SignupPage extends StatelessWidget {
           height: double.infinity,
           width: double.infinity,
           // color: Colors.white,
-          color: Color.fromARGB(255, 249, 244, 255),
-          padding: const EdgeInsets.all(10),
+          color: const Color.fromARGB(255, 249, 244, 255),
+          padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               MultiSimple(
-                  color: Colors.black,
+                  color: Color(0xff36454F),
                   subtitle: 'Signup',
                   weight: FontWeight.w700,
                   size: 25),
@@ -36,8 +36,10 @@ class SignupPage extends StatelessWidget {
               ),
               Text.rich(TextSpan(
                   text: 'Already have an account? ',
-                  style: GoogleFonts.montserrat(
-                      fontSize: 12, fontWeight: FontWeight.w500),
+                  style: const TextStyle(
+                    color: Color(0xff36454F),
+                    fontFamily: 'Montserret',
+                      fontSize: 15, fontWeight: FontWeight.w700),
                   children: <InlineSpan>[
                     TextSpan(
                       recognizer: TapGestureRecognizer()
@@ -45,15 +47,13 @@ class SignupPage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => LoginPage()),
+                                builder: (context) => const LoginPage()),
                           );
                         },
                       text: 'Login',
-                      style: GoogleFonts.montserrat(
-                          color: const Color.fromARGB(255, 131, 33, 243),
-                          decoration: TextDecoration.underline,
-                          decorationColor:
-                              const Color.fromARGB(255, 131, 33, 243),
+                      style: const TextStyle(
+                        fontFamily: 'Montserret',
+                          color: Color.fromARGB(255, 33, 89, 243),
                           fontSize: 15,
                           fontWeight: FontWeight.w600),
                     )
@@ -83,10 +83,10 @@ class SignupPage extends StatelessWidget {
                 height: 20.h,
               ),
               MultiSimple(
-                  color: Colors.black,
+                  color: Color(0xff36454F),
                   subtitle: 'Or sign up with social accounts',
-                  weight: FontWeight.w600,
-                  size: 12),
+                  weight: FontWeight.w700,
+                  size: 15),
               SizedBox(
                 height: 20.h,
               ),
@@ -94,64 +94,64 @@ class SignupPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    height: 35.h,
+                    height: 45.h,
                     width: 150.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         color: Colors.white),
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       children: [
                         Container(
                             height: 25.h,
                             width: 25.w,
-                            child: Image.asset('assets/apple.png')),
+                            child: Image.asset('assets/img/apple.png')),
                         SizedBox(
                           width: 20.w,
                         ),
                         MultiSimple(
-                            color: Colors.black,
+                            color: Color(0xff36454F),
                             subtitle: 'Apple',
                             weight: FontWeight.w700,
-                            size: 15)
+                            size: 16)
                       ],
                     ),
                   ),
                   Container(
-                    height: 35.h,
+                    height: 45.h,
                     width: 150.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         color: Colors.white),
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Row(
                       children: [
                         Container(
                             height: 25.h,
                             width: 25.w,
-                            child: Image.asset('assets/google.png')),
+                            child: Image.asset('assets/img/google.png')),
                         SizedBox(
                           width: 20.w,
                         ),
                         MultiSimple(
-                            color: Colors.black,
+                            color: Color(0xff36454F),
                             subtitle: 'Google',
                             weight: FontWeight.w700,
-                            size: 15)
+                            size: 16)
                       ],
                     ),
                   ),
                 ],
               ),
               SizedBox(
-                height: 20.h,
+                height: 220.h,
               ),
               ///////////////////////
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()),
+                    MaterialPageRoute(builder: (context) => const ProfilePage()),
                   );
                 },
                 child: Container(
@@ -159,13 +159,13 @@ class SignupPage extends StatelessWidget {
                   width: 300.w,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Colors.white),
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                      color: Color(0xff36454F)),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Center(
                     child: MultiSimple(
-                        color: Colors.black,
+                        color: Colors.white,
                         subtitle: 'Sign up',
-                        weight: FontWeight.w600,
+                        weight: FontWeight.w700,
                         size: 15),
                   ),
                 ),

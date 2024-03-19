@@ -26,11 +26,11 @@ class MyApp extends StatelessWidget {
             create: (context) => Provider1(),
             child: const MaterialApp(
               debugShowCheckedModeBanner: false,
-              // home: OnBoardingScreen(),
+              home: OnBoardingScreen(),
               // home: LoginOptions(),
               // home: SignupPage(),
               // home: LoginPage(),
-              home: ProfilePage(),
+              // home: ProfilePage(),
             ),
           );
         });

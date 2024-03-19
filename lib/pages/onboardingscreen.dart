@@ -26,17 +26,25 @@ class OnBoardingScreen extends StatelessWidget {
                   // Provider11.currentpage(3);
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const LoginOptions()),
+                    MaterialPageRoute(
+                        builder: (context) => const LoginOptions()),
                   );
                 },
                 child: Container(
                   height: 35.h,
                   width: 60.w,
-                  padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
                   decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          spreadRadius: 1.5,
+                          blurRadius: 1.5)
+                    ],
                     borderRadius: BorderRadius.circular(25),
-                    color: const Color.fromARGB(255, 224, 224, 224),
-                    // border: Border.all(color: Colors.black),
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    border: Border.all(color: Colors.black),
                   ),
                   child: Center(
                     child: MultiSimple(
@@ -46,6 +54,38 @@ class OnBoardingScreen extends StatelessWidget {
                         size: 15),
                   ),
                 ),
+              ),
+            ),
+            Positioned(
+              top: 15.h,
+              left: 15.w,
+              child: GestureDetector(
+                onTap: () {
+                  Provider11.onbchange2();
+                },
+                child: Container(
+                    padding: EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            spreadRadius: 1.5,
+                            blurRadius: 0.5)
+                      ],
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Colors.white,
+                        width: 2,
+                      ),
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        Icons.arrow_back_rounded,
+                        color: Colors.white,
+                        size: 25,
+                      ),
+                    ),
+                  ),
               ),
             ),
             const imgchanger(),

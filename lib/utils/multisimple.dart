@@ -21,15 +21,47 @@ class MultiSimple extends StatelessWidget {
     return Container(
       child: Text(
         subtitle!,
-        style: GoogleFonts.montserrat(
-          textStyle: TextStyle(
-            color: color,
-            letterSpacing: 0.2,
-            fontSize: size,
-            fontWeight: weight,
-          ),
+        style: TextStyle(
+          color: color,
+          letterSpacing: 0.2,
+          fontSize: size,
+          fontWeight: weight,
+          fontFamily: 'Montserret'
         ),
         textAlign: TextAlign.start,
+      ),
+    );
+  }
+}
+
+class MultiBalooBhai extends StatelessWidget {
+  Color? color;
+  String? subtitle;
+  FontWeight? weight;
+  double? size;
+  TextAlign align;
+  MultiBalooBhai({
+    super.key,
+    required this.color,
+    required this.subtitle,
+    required this.weight,
+    required this.size,
+    required this.align,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Text(
+        subtitle!,
+        style: TextStyle(
+          color: color,
+          letterSpacing: 0.2,
+          fontSize: size,
+          fontWeight: weight,
+          fontFamily: 'BalooBhai2',
+        ),
+        textAlign: align,
       ),
     );
   }
@@ -55,14 +87,12 @@ class MultiItallic extends StatelessWidget {
         subtitle!,
         style: GoogleFonts.montserrat(
           textStyle: TextStyle(
-            color: color,
-            letterSpacing: 0.2,
-            fontSize: size,
-            fontWeight: weight,
-            fontStyle: FontStyle.italic
-          ),
+              color: color,
+              letterSpacing: 0.2,
+              fontSize: size,
+              fontWeight: weight,
+              fontStyle: FontStyle.italic),
         ),
-        
         textAlign: TextAlign.start,
       ),
     );
@@ -89,13 +119,12 @@ class Multilinethrough extends StatelessWidget {
         subtitle!,
         style: GoogleFonts.montserrat(
           textStyle: TextStyle(
-            color: color,
-            letterSpacing: 0.2,
-            fontSize: size,
-            fontWeight: weight,
-            decoration: TextDecoration.lineThrough,
-            decorationColor: Colors.grey
-          ),
+              color: color,
+              letterSpacing: 0.2,
+              fontSize: size,
+              fontWeight: weight,
+              decoration: TextDecoration.lineThrough,
+              decorationColor: Colors.grey),
         ),
         textAlign: TextAlign.start,
       ),
